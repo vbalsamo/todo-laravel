@@ -62,7 +62,6 @@
                 <tbody>
 
                 @php $counter=1 @endphp
-
                 @foreach($todos as $todo)
                     <tr>
                         <th>{{$counter}}</th>
