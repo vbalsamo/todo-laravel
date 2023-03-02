@@ -18,6 +18,8 @@ return new class extends Migration
             $table->longText('title');
             $table->boolean('is_completed')->default(0);
             $table->timestamps();
+            $table->bigInteger('user_id')->unsigned()->index()->nullable(false);
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
